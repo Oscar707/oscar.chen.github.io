@@ -1,16 +1,21 @@
 import React from 'react';
-import MainLayout from './layouts/MainLayout.jsx';
-import Hero from './components/Hero.jsx';
-import Projects from './components/Projects.jsx';
-import Photos from './components/Photos.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import PhotosPage from './pages/PhotosPage';
 
 const App = () => {
   return (
-    <MainLayout>
-      <Hero />
-      <Projects />
-      <Photos />
-    </MainLayout>
+    <Router>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/photos" element={<PhotosPage />} />
+        </Routes>
+      </MainLayout>
+    </Router>
   );
 };
 
