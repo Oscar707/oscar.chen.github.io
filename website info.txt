@@ -1,4 +1,0 @@
-top bar and card boxes: 2C302E
-background: 474A48
-Hero section: 909590
-Text color: FFFFFF
